@@ -27,6 +27,9 @@
                                     <segment title="apple"/>
                                     <segment title="twitter"/>
                                 </segments>
+                                <connections>
+                                    <action selector="bookMarkAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="PzA-9p-Qdr"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yk0-1M-Lnh">
                                 <rect key="frame" x="0.0" y="49" width="375" height="30"/>
@@ -39,13 +42,29 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem systemItem="rewind" id="IKt-Mi-m0H"/>
+                                    <barButtonItem systemItem="rewind" id="IKt-Mi-m0H">
+                                        <connections>
+                                            <action selector="backAction:" destination="BYZ-38-t0r" id="zdM-U1-fGF"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uDs-8W-eZC"/>
-                                    <barButtonItem systemItem="fastForward" id="N5B-Bz-6qz"/>
+                                    <barButtonItem systemItem="fastForward" id="N5B-Bz-6qz">
+                                        <connections>
+                                            <action selector="forwardAction:" destination="BYZ-38-t0r" id="F3S-V1-lAE"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vWO-hQ-Vv6"/>
-                                    <barButtonItem systemItem="stop" id="IWt-hh-Hs9"/>
+                                    <barButtonItem systemItem="stop" id="IWt-hh-Hs9">
+                                        <connections>
+                                            <action selector="stopAction:" destination="BYZ-38-t0r" id="EQY-4v-7u7"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="f1g-cG-x3I"/>
-                                    <barButtonItem systemItem="refresh" id="UUX-u9-aDq"/>
+                                    <barButtonItem systemItem="refresh" id="UUX-u9-aDq">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="U0U-ZZ-4L9"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-zU-oqL">
@@ -66,6 +85,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bookMarkSegCtrl" destination="5fE-wR-t1L" id="Nlu-ng-a12"/>
+                        <outlet property="spinningInd" destination="mbc-oP-X7b" id="USw-Ce-u1U"/>
+                        <outlet property="urlTextField" destination="Yk0-1M-Lnh" id="P4L-fL-usc"/>
+                        <outlet property="webView" destination="NNN-zU-oqL" id="B8L-gr-4NI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
